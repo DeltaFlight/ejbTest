@@ -1195,6 +1195,7 @@
             </subsystem>
             <subsystem xmlns="urn:jboss:domain:pojo:1.0"/>
             <subsystem xmlns="urn:jboss:domain:remoting:1.1">
+                <worker-thread-pool task-core-threads="20" task-max-threads="40" write-threads="20" read-threads="20"/>
                 <connector name="remoting-connector" socket-binding="remoting" security-realm="ApplicationRealm"/>
                 <outbound-connections>
                     <remote-outbound-connection name="remote-ejb-connection" outbound-socket-binding-ref="remote-ejb"
