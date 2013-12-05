@@ -1,0 +1,2 @@
+deploy server/target/server.war --server-groups=servers
+deploy client/target/client.war --server-groups=clients
