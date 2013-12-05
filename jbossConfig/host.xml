@@ -67,13 +67,12 @@
 
     <servers>
         <server name="client1" group="clients" auto-start="true">
-            <!-- Remote JPDA debugging for a specific server
             <jvm name="default">
               <jvm-options>
                 <option value="-agentlib:jdwp=transport=dt_socket,address=8787,server=y,suspend=n"/>
+                  <!--<option value="-agentpath:/home/volt/yjp-2013-build-13056/bin/linux-x86-64/libyjpagent.so=delay=10000"/>-->
               </jvm-options>
            </jvm>
-           -->
             <socket-bindings port-offset="100"/>
         </server>
         <server name="server1" group="servers" auto-start="true">

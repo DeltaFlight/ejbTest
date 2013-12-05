@@ -20,6 +20,30 @@
             <artifactId>jboss-jaxrs-api_1.1_spec</artifactId>
             <scope>provided</scope>
         </dependency>
+        <dependency>
+            <groupId>org.jboss</groupId>
+            <artifactId>jboss-ejb-client</artifactId>
+            <scope>provided</scope>
+            <version>1.0.21.Final</version>
+        </dependency>
+        <dependency>
+            <groupId>org.jboss.as</groupId>
+            <artifactId>jboss-as-remoting</artifactId>
+            <scope>provided</scope>
+            <version>7.2.0.Final-redhat-8</version>
+        </dependency>
+        <dependency>
+            <groupId>org.jboss.as</groupId>
+            <artifactId>jboss-as-server</artifactId>
+            <scope>provided</scope>
+            <version>7.2.0.Final-redhat-8</version>
+        </dependency>
+        <dependency>
+            <groupId>org.jboss.as</groupId>
+            <artifactId>jboss-as-controller</artifactId>
+            <scope>provided</scope>
+            <version>7.2.0.Final-redhat-8</version>
+        </dependency>
     </dependencies>
 
 </project>
