@@ -1,5 +1,5 @@
 #!/bin/sh -e
-pkill -KILL -f jboss-modules.jar
+pkill -KILL -f jboss-modules.jar || true
 cp jbossConfig/* ~/jbossEjb/domain/configuration
 ~/jbossEjb/bin/domain.sh -Dserver.host=localhost &
 sleep 1
