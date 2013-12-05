@@ -941,11 +941,18 @@
                 <timer-service thread-pool-name="default">
                     <data-store path="timer-service-data" relative-to="jboss.server.data.dir"/>
                 </timer-service>
-                <remote connector-ref="remoting-connector" thread-pool-name="default"/>
+                <remote connector-ref="remoting-connector" thread-pool-name="default">
+                    <channel-creation-options>
+                        <option name="MAX_OUTBOUND_MESSAGES" value="400" type="remoting"/>
+                        <option name="MAX_INBOUND_MESSAGES" value="400" type="remoting"/>
+                        <option name="MAX_OUTBOUND_CHANNELS" value="400" type="remoting"/>
+                        <option name="MAX_INBOUND_CHANNELS" value="400" type="remoting"/>
+                    </channel-creation-options>
+                </remote>
                 <thread-pools>
                     <thread-pool name="default">
-                        <max-threads count="10"/>
-                        <keepalive-time time="100" unit="milliseconds"/>
+                        <max-threads count="400"/>
+                        <keepalive-time time="1000" unit="milliseconds"/>
                     </thread-pool>
                 </thread-pools>
                 <iiop enable-by-default="false" use-qualified-name="false"/>
@@ -1342,7 +1349,7 @@
                 <remote-destination host="localhost" port="25"/>
             </outbound-socket-binding>
             <outbound-socket-binding name="remote-ejb">
-                <remote-destination host="localhost" port="4447"/>
+                <remote-destination host="${server.host}" port="4447"/>
             </outbound-socket-binding>
         </socket-binding-group>
     </socket-binding-groups>

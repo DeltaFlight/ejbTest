@@ -77,9 +77,28 @@
             <socket-bindings port-offset="100"/>
         </server>
         <server name="server1" group="servers" auto-start="true">
-            <!-- server-three avoids port conflicts by incrementing the ports in
-                 the default socket-group declared in the server-group -->
             <socket-bindings port-offset="0"/>
+        </server>
+        <server name="server2" group="servers" auto-start="true">
+            <socket-bindings port-offset="200"/>
+        </server>
+        <server name="server3" group="servers" auto-start="true">
+            <socket-bindings port-offset="300"/>
+        </server>
+        <server name="server4" group="servers" auto-start="true">
+            <socket-bindings port-offset="400"/>
+        </server>
+        <server name="server5" group="servers" auto-start="true">
+            <socket-bindings port-offset="500"/>
+        </server>
+        <server name="server6" group="servers" auto-start="true">
+            <socket-bindings port-offset="600"/>
+        </server>
+        <server name="server7" group="servers" auto-start="true">
+            <socket-bindings port-offset="700"/>
+        </server>
+        <server name="server8" group="servers" auto-start="true">
+            <socket-bindings port-offset="800"/>
         </server>
     </servers>
 </host>
