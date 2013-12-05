@@ -1,0 +1,10 @@
+#!/bin/sh -e
+pkill -KILL -f jboss-modules.jar
+cp jbossConfig/* ~/jbossEjb/domain/configuration
+~/jbossEjb/bin/domain.sh -Dserver.host=localhost &
+sleep 1
+mvn package
+sleep 3
+#sleep 4
+~/jbossEjb/bin/jboss-cli.sh --controller=localhost:9999 --connect --file=deploy.cli
+
